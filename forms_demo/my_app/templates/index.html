@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    Hello Django
+    <form action="/register" method="post">
+        {% csrf_token %}
+        {{ regForm.as_p }}
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" name="confirm_password">
+        <input type="submit" value="Register">
+    </form>
+
+    <form action="/login" method="post">
+        {% csrf_token %}
+        {{ logForm.as_table}}
+        <input type="submit" value="Login">
+    </form>
 </body>
 </html>
