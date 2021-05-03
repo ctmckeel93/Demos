@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import User 
+from .models import *
 from .forms import RegisterForm, LoginForm 
+from django.contrib import messages 
 
 # Create your views here.
 def index(request):
@@ -13,6 +14,13 @@ def index(request):
     return render(request, 'index.html', context)
 
 def register(request):
+    errors = User.objects.basic_validator(request.POST)
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect('/')
+
+
     fname = request.POST['first_name']
     lname = request.POST['last_name']
     email = request.POST['email']

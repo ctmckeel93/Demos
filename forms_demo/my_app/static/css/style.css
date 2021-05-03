@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.test {
+    color: red;
+    font-size: 40pt;
+}
+
+.form-div {
+    margin: 0 auto !important;
+    border: black solid 2px;
+    width: 600px;
+}
+
