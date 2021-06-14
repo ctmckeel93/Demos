@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: aqua;
+}
+.container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* border: 5px solid red; */
+  width: 500px;
+  height: auto;
+  padding: 50px;
+  margin-top: 5%;
+  color: aqua;
+  overflow: auto;
+
+}
+
+.list  {
+  font-size: 24pt !important;
+  display: inline-block;
+}
+
+
+
