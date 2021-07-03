@@ -1,0 +1,12 @@
+@model User
+
+<div class="text-center">
+    <h1>@Model.FirstName @Model.LastName's Collection</h1>
+</div>
+
+@{
+    foreach(Bookshelf bs in @Model.OwnedBooks)
+    {
+        <p>@bs.UserBook.Title</p> <a href="/users/collection/remove/@bs.UserBook.BookId">Remove</a>
+    }
+}

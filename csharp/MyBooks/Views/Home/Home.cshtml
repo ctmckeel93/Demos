@@ -1,0 +1,11 @@
+
+<div class="text-center">
+<h1>This is your Home page</h1>
+    
+    @{
+        foreach (Book b in @ViewBag.AllBooks)
+        {
+            <p><a href="/books/@b.BookId">@b.Title</a></p>
+        }
+    }
+</div>

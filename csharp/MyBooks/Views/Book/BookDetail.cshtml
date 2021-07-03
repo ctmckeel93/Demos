@@ -1,0 +1,19 @@
+@model Book 
+
+<div class="text-center d-flex justify-space-between">
+    <h1>@Model.Title</h1> 
+</div>
+<a href="/books/add/@Model.BookId"><button class="btn btn-success">Add to Collection</button></a>
+
+<p>Genre: @Model.Genre</p>
+<p>Author: @Model.Author</p>
+
+<h2><u>Readers</u></h2>
+<ul>
+    @{     
+            foreach(Bookshelf shelf in @Model.Owners)
+            {
+                <p>@shelf.Reader.FirstName @shelf.Reader.LastName</p>
+            }
+    }
+</ul>

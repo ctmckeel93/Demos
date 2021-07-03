@@ -1,0 +1,20 @@
+@model Book 
+
+<form asp-action="CreateBook" asp-controller="Book" method="POST">
+    <div class="col-sm-6">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <input asp-for="Title" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <input asp-for="Genre" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <input asp-for="Author" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-dark">
+            </div>
+        </div>
+    </div>
+</form>
